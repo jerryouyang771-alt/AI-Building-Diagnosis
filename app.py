@@ -84,10 +84,12 @@ if "Mission 01" in page:
 elif "Mission 02" in page:
     st.title("多回波技术与 AI 分割原理解析")
     
-    if os.path.exists("video.mp4"):
-        st.video(open("video.mp4", 'rb').read())
-    else:
-        st.warning("🎥 请将你们团队制作的微课视频重命名为 `video.mp4` 并拖入当前文件夹。")
+    st.markdown("""
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1dToCBdEiPç&page=1&high_quality=1&danmaku=0" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" 
+        style="width:100%; height:450px; border-radius: 10px;">
+        </iframe>
+        """, unsafe_allow_html=True)
     
     st.markdown("### 📝 随堂笔记精华")
     with st.expander("▶️ 01:20 - 多回波技术原理解析", expanded=True):
