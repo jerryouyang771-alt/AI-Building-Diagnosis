@@ -105,9 +105,9 @@ elif "Mission 02" in page:
     components.html(bili_code, height=460)
     
     st.markdown("### 📝 随堂笔记精华")
-    with st.expander("▶️ 01:20 - 多回波技术原理解析", expanded=True):
+    with st.expander("▶️ 04:20 - 多回波技术原理解析", expanded=True):
         st.write("激光穿透树叶时，部分光子形成首回波，剩余光子继续前进打在墙体上形成多次/最后回波。这就是我们能给被遮挡的建筑做 CT 的秘密。")
-    with st.expander("▶️ 03:45 - 语义分割与 AI 诊断"):
+    with st.expander("▶️ 06:30 - 语义分割与 AI 诊断"):
         st.write("通过深度学习算法，让计算机自动区分出哪些点是普通墙面，哪些点是危险的裂缝。")
 
     st.markdown("---")
