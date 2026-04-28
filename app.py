@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -84,12 +85,24 @@ if "Mission 01" in page:
 elif "Mission 02" in page:
     st.title("多回波技术与 AI 分割原理解析")
     
-    st.markdown("""
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1dToCBdEiPç&page=1&high_quality=1&danmaku=0" 
+   # 采用前端 iframe 嵌入，并添加 no-referrer 绕过 B 站防盗链机制
+    bili_code = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="referrer" content="no-referrer">
+    </head>
+    <body style="margin: 0; padding: 0;">
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1dToCBdEiP&page=1&high_quality=1&danmaku=0" 
         scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" 
-        style="width:100%; height:450px; border-radius: 10px;">
+        style="width: 100%; height: 450px; border-radius: 10px;">
         </iframe>
-        """, unsafe_allow_html=True)
+    </body>
+    </html>
+    """
+    
+    # 渲染这个带有隐身斗篷的 HTML 模块
+    components.html(bili_code, height=460)
     
     st.markdown("### 📝 随堂笔记精华")
     with st.expander("▶️ 01:20 - 多回波技术原理解析", expanded=True):
