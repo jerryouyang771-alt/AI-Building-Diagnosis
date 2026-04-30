@@ -124,6 +124,8 @@ if page == "00. 首页":
     st.markdown("---")
     st.markdown("### 🎬 系统先导片 (微课原片)")
     st.write("在开始硬核探究之前，别忘了通过复习我们团队制作的微课视频来了解本次任务的背景原理哦：")
+
+    st.caption("💡 **提示：为获得最佳视觉效果（消除画面黑边），建议点击视频右下角开启【全屏】观看。**")
     
     st.markdown("""
         <iframe src="//player.bilibili.com/player.html?bvid=BV1dToCBdEiP&page=1&high_quality=1&danmaku=0" 
